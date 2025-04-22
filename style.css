@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* Dark background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px; /* Increased width for better fit */
+    margin: auto;
+    background: #3c3c3c; /* Darker container background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it is responsive */
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Change header color for better visibility */
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #4a4a4a; /* Dark background for inputs */
+    color: white; /* White text color for inputs */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #9b59b6; /* Updated color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+button:hover {
+    background-color: #7a3e7a; /* Darker shade for button hover without changing border */
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical layout */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-details {
+    display: block; /* Keep as block for vertical stacking */
+    margin-top: 10px; /* Add margin to separate from task title */
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between; /* Align deadline, state, and priority */
+    margin-bottom: 10px; /* Add space below task info */
+}
+
+.task-progress, .task-priority {
+    margin-right: 10px; /* Add space between state and priority */
+}
+
+.task-deadline {
+    margin-right: 10px; /* Add space between deadline and state */
+}
+
+.task-description {
+    resize: none; /* Prevent resizing */
+    overflow-y: auto; /* Add vertical scrollbar */
+    height: 300px; /* Set a fixed height for the description to accommodate 15 lines */
+    width: 100%; /* Make the description textbox fill the entire form */
+}
+
+.task-item.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-priority {
+    color: #fff; /* White color for priority text */
+}
+
+.task-title {
+    font-weight: bold; /* Make task title bold */
+    color: white; /* Title color set to white */
+}
+
+.priority-1 {
+    color: red; /* Priority 1 color */
+    font-weight: bold; /* Make it bold */
+}
+.priority-2 {
+    color: orange; /* Priority 2 color */
+    font-weight: bold; /* Make it bold */
+}
+.priority-3 {
+    color: yellow; /* Priority 3 color */
+    font-weight: bold; /* Make it bold */
+}
+.priority-4 {
+    color: green; /* Priority 4 color */
+    font-weight: bold; /* Make it bold */
+}
