@@ -1,42 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List Application</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>To-Do List Application</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Add a new task" required>
-
-            <select id="priority-input">
-                <option value="1">Priority 1</option>
-                <option value="2">Priority 2</option>
-                <option value="3">Priority 3</option>
-                <option value="4">Priority 4</option>
-            </select>
-            <input type="date" id="deadline-input" required>
-
-            <button type="submit">Add Task</button>
-        </form>
-        <div id="board" style="display: flex; gap: 10px;">
-            <div class="column" data-status="to-do">
-              <h2>To Do</h2>
-              <ul class="task-list" id="to-do"></ul>
-            </div>
-            <div class="column" data-status="in-progress">
-              <h2>In Progress</h2>
-              <ul class="task-list" id="in-progress"></ul>
-            </div>
-            <div class="column" data-status="done">
-              <h2>Done</h2>
-              <ul class="task-list" id="done"></ul>
-            </div>
-          </div>          
-    </div>
-    <script src="script.js"></script>
+<div id="auth-section"><!-- tu poczatek tego co dodalem -->
+<h2 style="color: white;">Zaloguj się lub zarejestruj</h2>
+<div id="auth-forms" style="display: flex; gap: 10px; margin-bottom: 20px;">
+<form id="register-form">
+<input id="register-username" placeholder="Nowa nazwa użytkownika" required="" type="text"/>
+<input id="register-password" placeholder="Hasło" required="" type="password"/>
+<button type="submit">Zarejestruj</button>
+</form>
+<form id="login-form">
+<input id="login-username" placeholder="Nazwa użytkownika" required="" type="text"/>
+<input id="login-password" placeholder="Hasło" required="" type="password"/>
+<button type="submit">Zaloguj</button>
+</form>
+</div>
+</div><!-- tu koniec tego co dodalem -->
+<div class="container" id="app-section" style="display: none;">
+<div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+<button id="logout-button" style="background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+      Wyloguj
+    </button>
+</div>
+<h1>To-Do List</h1>
+<form id="task-form">
+<input id="task-input" placeholder="Add a new task" required="" type="text"/>
+<select id="priority-input">
+<option value="1">Priority 1</option>
+<option value="2">Priority 2</option>
+<option value="3">Priority 3</option>
+<option value="4">Priority 4</option>
+</select>
+<input id="deadline-input" required="" type="date"/>
+<button type="submit">Add Task</button>
+</form><div id="filters">
+<select id="filter-priority">
+<option value="">All Priorities</option>
+<option value="1">Priority 1</option>
+<option value="2">Priority 2</option>
+<option value="3">Priority 3</option>
+<option value="4">Priority 4</option>
+</select>
+<select id="filter-status">
+<option value="">All Statuses</option>
+<option value="to-do">To Do</option>
+<option value="in-progress">In Progress</option>
+<option value="done">Done</option>
+</select>
+<input id="filter-text" placeholder="Search by title" type="text"/>
+</div>
+<!-- 🔽 PRZYCISKI ZAKŁADEK -->
+<div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
+<button onclick="showTab('my')">Moje zadania</button>
+<button onclick="showTab('shared')">Udostępnione mi</button>
+</div>
+<!-- 🔽 MOJE ZADANIA -->
+<div id="my-tasks-tab">
+<div class="task-columns" style="display: flex; gap: 10px;">
+<div class="column" data-status="to-do">
+<h2>To Do</h2>
+<ul class="task-list" id="to-do"></ul>
+</div>
+<div class="column" data-status="in-progress">
+<h2>In Progress</h2>
+<ul class="task-list" id="in-progress"></ul>
+</div>
+<div class="column" data-status="done">
+<h2>Done</h2>
+<ul class="task-list" id="done"></ul>
+</div>
+</div>
+</div>
+<!-- 🔽 UDOSTĘPNIONE MI -->
+<div id="shared-tasks-container" style="display: none;">
+<h2>Zadania udostępnione mi</h2>
+<div class="task-list" id="shared-task-list"></div>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

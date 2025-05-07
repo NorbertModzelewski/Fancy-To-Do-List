@@ -192,3 +192,125 @@ input:focus, select:focus {
     border-radius: 5px;
     cursor: grab;
 }
+.task-box {
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+  }
+  
+  .task-box:hover {
+    background-color: #4a4a4a;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  
+  .task-priority-select {
+    background-color: #4a4a4a;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 6px;
+    border: 1px solid #777;
+  }
+  
+  .task-title {
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    flex: 1;
+  }
+  
+  .task-deadline {
+    color: #ccc;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .task-actions button {
+    background-color: #a855f7;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .task-actions button:hover {
+    background-color: #9333ea;
+  }
+  
+  .task-description {
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+  }
+  .task-priority-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .priority-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+  }
+  
+  .priority-1 { background-color: red; }
+  .priority-2 { background-color: orange; }
+  .priority-3 { background-color: yellow; }
+  .priority-4 { background-color: green; }
+  
+  .hidden {
+    display: none;
+  }
+  .task-deadline-input {
+    background-color: #4a4a4a;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .task-shared-by {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 8px;
+  }
+
+#filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#filters select, #filters input {
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
